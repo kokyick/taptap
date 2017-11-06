@@ -1,0 +1,43 @@
+<!--
+  Generated template for the RoomPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding class="background">
+  <div style="text-align:center;">
+    <h1>{{maxTime}}</h1>
+    <h2 style="padding-bottom:10%;">START VOTING...</h2>
+    <ion-row justify-content-center>
+      <ion-col (click)="cat1click()" align-self-center>
+        <h3>Animals</h3>
+        <p>{{cat1}}</p>
+      </ion-col>
+      <ion-col (click)="cat2click()" align-self-center>
+        <h3>Literature</h3>
+        <p>{{cat2}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row  justify-content-center>
+      <ion-col (click)="cat3click()" align-self-center>
+        <h3>Movies / Drama</h3>
+        <p>{{cat3}}</p>
+      </ion-col>
+      <ion-col (click)="cat4click()" align-self-center>
+        <h3>Politics</h3>
+        <p>{{cat4}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+        <ion-col (click)="cat5click()" align-self-center>
+          <h3>Technology</h3>
+          <p>{{cat5}}</p>
+        </ion-col>
+        <ion-col (click)="cat6click()" align-self-center>
+          <h3>Random</h3>
+          <p>{{cat6}}</p>
+        </ion-col>
+    </ion-row>
+    <img src="assets/imgs/logo-notap.png" style="height:80px;"/>
+  </div>
+</ion-content>

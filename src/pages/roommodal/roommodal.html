@@ -1,0 +1,15 @@
+
+<ion-content padding class="background">
+  <div class="center">
+    <h1>TAP TAP</h1>
+    <p>
+      THE ULTIMATE BATTLE OF WITS AND SPEED.
+    </p>
+    <div style="padding-top:50px;" class="center-elements">
+      <ion-input [value]="roomnum" [(ngModel)]="roomnum" placeholder="Join room number" color="light"></ion-input>
+      <button ion-button block margin-top color="fb-color" aria-placeholder="" (click)="closeModal()">JOIN</button>
+      <button ion-button block margin-top color="fb-color" aria-placeholder="" (click)="cancelModal()">CANCEL</button>
+    </div>
+
+  </div>
+</ion-content>

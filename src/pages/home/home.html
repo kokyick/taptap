@@ -1,14 +1,18 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="background">
+  <div class="center">
+    <h1>TAP TAP</h1>
+    <p>
+      THE ULTIMATE BATTLE OF WITS AND SPEED.
+    </p>
+    <div *ngIf="pager==1" style="padding-top:50px;" class="center-elements">
+      <ion-input [value]="username" [(ngModel)]="username" placeholder="Enter your name" color="light"></ion-input>
+      <button ion-button block margin-top color="fb-color" aria-placeholder="" (click)="goStep2()">START</button>
+    </div>
+    <div *ngIf="pager==2" style="padding-top:50px;" class="center-elements">
+      <p>Hi {{username}}</p>
+      <button ion-button block margin-top color="fb-color" aria-placeholder="" (click)="chooseRoom()">Join a room</button>      
+      <button ion-button block margin-top color="fb-color" aria-placeholder="" (click)="goToRoom()">Create a room</button>
+    </div>
+  </div>
 </ion-content>

@@ -1,5 +1,8 @@
 {
   "name": "taptap",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "8576a607",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

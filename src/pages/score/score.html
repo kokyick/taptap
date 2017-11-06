@@ -1,0 +1,30 @@
+<!--
+  Generated template for the RoomPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding class="background">
+    <div style="text-align:center;">
+      <h3>LEADERBOARD</h3>
+      <ion-list class="list-full-border table-list side-margins">
+          <ion-item style="background:black;">
+              <div style="text-overflow: ellipsis;overflow: hidden; background-color:#000000;">
+                <p style="padding:5px;" color="black">RANKING:</p>
+              </div>
+          </ion-item>
+          <ion-item *ngFor="let users of userScore" style="background:black;">
+            <div style="text-overflow: ellipsis;overflow: hidden; background-color:#000000;">
+              <h3 style="padding:7px; float:left" color="black">{{ users.name }}</h3>
+              <h3 style="padding:7px; float:right" color="black">{{ users.score }}</h3>
+            </div>
+          </ion-item>
+        </ion-list>
+        <div class="side-margins" >
+          <button ion-button block margin-top color="fb-color" aria-placeholder="" (click)="startgame()">START OVER</button>
+          <button ion-button block margin-top color="danger" aria-placeholder="" (click)="leaveroom()">LEAVE ROOM</button>
+        </div>
+        <img src="assets/imgs/logo-notap.png" style="height:80px;"/>
+      </div>
+</ion-content>
+  
