@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { GamewaitingPage } from "../gamewaiting/gamewaiting";
 import { QuestionPage } from "../question/question";
-// import { ScorePage } from "../score/score";
+import { ScorePage } from "../score/score";
 /**
  * Generated class for the GamePage page.
  *
@@ -49,7 +49,7 @@ export class GamePage {
     {
       self.changePos();
       self.moveghost();
-    }, 1000);
+    }, 500);
 
   }
 
@@ -66,9 +66,11 @@ export class GamePage {
   ghosttouched(){
     var self=this;
     var test = Math.floor(Math.random() * 100);
-    // self.navCtrl.push(ScorePage,{param1: self.username,param2: self.userInRoom,param3: self.roomNum, param4:self.winnercat});
+    
     if(test%2==0)
       self.navCtrl.push(QuestionPage,{param1: self.username,param2: self.userInRoom,param3: self.roomNum, param4:self.winnercat});
+    else if(test%9==0)
+    self.navCtrl.push(ScorePage,{param1: self.username,param2: self.userInRoom,param3: self.roomNum, param4:self.winnercat});
     else
       self.navCtrl.push(GamewaitingPage,{param1: self.username,param2: self.userInRoom,param3: self.roomNum, param4:self.winnercat});
   }

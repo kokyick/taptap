@@ -15,8 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class QuestionPage {
   question:any;
   answers:any=[];
-  ans:any;
   maxTime:any=10;
+
+  anss:any="";
+  ans:any=false;
+  maxTimeAns:any=3;
+  correct:any;
 
   username:any;
   userInRoom:any;
@@ -38,12 +42,33 @@ export class QuestionPage {
     self.answers=['cat','dog','rabbit','dinosaur'];
     self.countdown();
   }
+  checkans(){
+    console.log("checking");
+    this.ans=true;
+    if(this.anss=='dog')
+      this.correct=true;
+    else
+      this.correct=false;
+    this.anscountdown();
+  }
+  anscountdown(){
+    var self=this;
+    setTimeout(x => 
+      {
+        if(self.maxTimeAns <= 0) { 
+          self.navCtrl.pop();
+        }else{
+          self.maxTimeAns -= 1;
+          self.anscountdown();
+        }
+      }, 1000);
+  }
   countdown(){
     var self=this;
     setTimeout(x => 
       {
         if(self.maxTime <= 0) { 
-          self.navCtrl.pop();
+          self.checkans();
         }else{
           self.maxTime -= 1;
           self.countdown();

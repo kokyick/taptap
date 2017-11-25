@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GamewaitingPage {
 
-  maxTime:any=10;
+  maxTime:any=3;
   opponent:any="someone";
 
   username:any;
